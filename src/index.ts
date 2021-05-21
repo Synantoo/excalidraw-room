@@ -22,12 +22,14 @@ server.listen(port, () => {
   serverDebug(`listening on port: ${port}`);
 });
 
+
+
 const io = socketIO(server, {
   handlePreflightRequest: (req, res) => {
     const headers = {
       "Access-Control-Allow-Headers": "Content-Type, Authorization",
       "Access-Control-Allow-Origin":
-        (req.header && req.header.origin) || "https://excalidraw.com",
+        (req.header && req.header.origin) || "https://synantoo.app",
       "Access-Control-Allow-Credentials": true,
     };
     res.writeHead(200, headers);
