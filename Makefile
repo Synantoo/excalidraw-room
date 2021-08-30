@@ -1,5 +1,6 @@
 all:
 	@docker build --pull -t excalidrawroom .
+	@trivy image excalidrawroom:latest
 
 push:
 	@test -z "$(VERSION)" && echo "Usage: VERSION=x.y.z make push" && exit 1 || true
