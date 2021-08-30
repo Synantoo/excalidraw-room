@@ -1,4 +1,5 @@
-FROM node:14-alpine
+FROM node:14-alpine3.13
+RUN apk upgrade --no-cache
 
 WORKDIR /excalidraw-room
 
