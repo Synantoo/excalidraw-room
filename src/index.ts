@@ -29,7 +29,7 @@ const io = socketIO(server, {
     const headers = {
       "Access-Control-Allow-Headers": "Content-Type, Authorization",
       "Access-Control-Allow-Origin":
-        (req.header && req.header.origin) || "https://synantoo.app",
+        (req.header && req.header.origin) || "https://app.kizwork.com",
       "Access-Control-Allow-Credentials": true,
     };
     res.writeHead(200, headers);
